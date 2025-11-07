@@ -5,24 +5,24 @@ The Tutorial includes a test program and example code for training a neural netw
 Try running `test.py` first. Once the program is running, TensorFlow and Keras are correctly installed.
 
 Then use `gt.py`, the generic trainer, to read the training data from a CSV file, train the neural network, and save it as a file. It takes three parameters:
-1. path and filename of CSV containing the training data (URL-Format)
+1. path and filename of CSV containing the training data
 2. path and filename under which the trained model shall be saved
 3. number of training runs
 
 Example:
 
-`file://localhost/home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/trainingdata.csv /home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testmodel.keras 200`
+`/home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/trainingdata.csv /home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testmodel.keras 200`
 
 A `trainingdata.csv` is provided with this project. Please note that the last column must be titled with the keyword "ActualValue".
 
 The trained neural network can then be applied to test samples using `gp.py` to predict suitable values. It takes three parameters:
 1. path and filename of the previously trained model
-2. path and filename of CSV containing the test samples (URL-Format)
+2. path and filename of CSV containing the test samples
 3. path and filename under which the results shall be saved
 
 Example:
 
-`/home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testmodel.keras file://localhost/home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testsamples.csv /home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testresult.csv`
+`/home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testmodel.keras /home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testsamples.csv /home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testresult.csv`
 
 A `testsamples.csv` is provided with this project. Please note that the first column must be titled with the keyword "ID".
 
