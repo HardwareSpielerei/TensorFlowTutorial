@@ -11,7 +11,7 @@ Then use `gt.py`, the generic trainer, to read the training data from a CSV file
 
 Example:
 
-`/home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/trainingdata.csv /home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testmodel.keras 200`
+`/home/myuser/PycharmProjects/TensorFlowSandbox/testdata/trainingdata.csv /home/myuser/PycharmProjects/TensorFlowSandbox/testdata/testmodel.keras 200`
 
 A `trainingdata.csv` is provided with this project. Please note that the last column must be titled with the keyword "ActualValue".
 
@@ -22,7 +22,7 @@ The trained neural network can then be applied to test samples using `gp.py` to 
 
 Example:
 
-`/home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testmodel.keras /home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testsamples.csv /home/gabriel/PycharmProjects/TensorFlowSandbox/testdata/testresult.csv`
+`/home/myuser/PycharmProjects/TensorFlowSandbox/testdata/testmodel.keras /home/myuser/PycharmProjects/TensorFlowSandbox/testdata/testsamples.csv /home/myuser/PycharmProjects/TensorFlowSandbox/testdata/testresult.csv`
 
 A `testsamples.csv` is provided with this project. Please note that the first column must be titled with the keyword "ID".
 
