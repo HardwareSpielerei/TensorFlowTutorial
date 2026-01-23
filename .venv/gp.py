@@ -1,7 +1,7 @@
 ##
 # The MIT License (MIT)
 #
-# Copyright (c) 2025 Gabriel Schmidt
+# Copyright (c) 2026 Gabriel Schmidt
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -22,15 +22,12 @@
 # SOFTWARE.
 #
 
-print('Generic Predicter V0.6')
+print('Generic Predicter V0.8')
 
 print('import')
 import sys
-import tensorflow as tf
-import tensorflow_datasets as tfds
 import numpy as np
 from tensorflow import keras
-from tensorflow.keras import layers
 import pandas as pd
 
 modelfilename = sys.argv[1]
@@ -48,9 +45,10 @@ samples = pd.read_csv(samplesfilename, sep=',')
 print('Output vorbereiten')
 output = samples.pop('ID')
 output = pd.DataFrame([output]).transpose()
+samples = np.array(samples)
+print('samples data type: ' + str(samples.dtype))
 
 print('Modell anwenden')
-samples = np.array(samples)
 res = model.predict(samples)
 output.insert(1, "Estimate", res)
 

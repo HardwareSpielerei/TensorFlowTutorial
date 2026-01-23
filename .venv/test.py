@@ -1,7 +1,7 @@
 ##
 # The MIT License (MIT)
 #
-# Copyright (c) 2025 Gabriel Schmidt
+# Copyright (c) 2026 Gabriel Schmidt
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -24,8 +24,8 @@
 
 print('import')
 import tensorflow as tf
-import numpy as np
 from tensorflow import keras
+import numpy as np
 
 print(tf.__version__)
 
@@ -37,9 +37,9 @@ model.compile(optimizer='sgd', loss='mean_squared_error')
 
 print('Daten bereitstellen')
 xs = np.array([-1.0, 0.0, 1.0, 2.0, 3.0, 4.0], dtype=float)
-print(xs.dtype)
+print('x data type: ' + str(xs.dtype))
 ys = np.array([-2.0, 1.0, 4.0, 7.0, 10.0, 13.0], dtype=float)
-print(ys.dtype)
+print('y data type: ' + str(ys.dtype))
 
 print('neuronales Netzwerk trainieren')
 model.fit(xs, ys, validation_split=0.1, epochs=200)
